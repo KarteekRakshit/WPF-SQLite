@@ -1,0 +1,100 @@
+﻿<Window x:Class="DBConnect.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DBConnect"
+        mc:Ignorable="d"
+        Title="Logger" Height="229.855" Width="404.808" ResizeMode="CanMinimize" Background="#FF2D2D30" Foreground="White" FontFamily="Roboto" FontSize="14" FontWeight="Light" WindowStyle="ToolWindow"
+        Icon="./img/ico.png"
+        >
+    <Grid>
+        <Border Padding="10">
+            <StackPanel>
+
+                <Grid Margin="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="User ID"/>
+                    <TextBox x:Name="UserIdTextBox" Grid.Column="1" />
+                </Grid>
+
+                <Grid Margin="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Date"/>
+                    <DatePicker x:Name="DateDatePicker" Grid.Column="1" BorderBrush="{x:Null}" />
+                </Grid>
+
+                <Grid Margin="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Lexicon"/>
+                    <Grid Grid.Column="1" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <CheckBox x:Name="PronningCheckBox" Grid.Column="0" Content="Pronning" Foreground="White"/>
+                        <CheckBox x:Name="ReviewingCheckBox" Grid.Column="1" Content="Reviewing" Foreground="White"/>
+                    </Grid>
+                </Grid>
+                <Grid Margin="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Margin="0 0 10 2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"  Text="Prone Cycle"/>
+                        <TextBox x:Name="ProneCycleTextBox" Grid.Column="1" />
+                    </Grid>
+                    <Grid Grid.Column="1"  Margin="0 0 0 2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"  Text="Review Cycle"/>
+                        <TextBox x:Name="ReviewCycleTextBox" Grid.Column="1" />
+                    </Grid>
+                </Grid>
+                <Grid Margin="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Margin="0 0 10 2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"  Text="Prone Count"/>
+                        <TextBox x:Name="ProneCountTextBox" Grid.Column="1" />
+                    </Grid>
+                    <Grid Grid.Column="1"  Margin="0 0 0 2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"  Text="Review Count"/>
+                        <TextBox x:Name="ReviewCountTextBox" Grid.Column="1" />
+                    </Grid>
+                </Grid>
+                <Button Click="SubmitButtonOnClick" x:Name="SubmitButton" Margin="2" Content="Submit" Foreground="White" Background="#FF878787" FontWeight="Medium"/>
+                <Button Click="LoadButtonOnClick" x:Name="MyDataWindowButton" Margin="2" Content="Load" Foreground="White" Background="#FF878787" FontWeight="Medium"/>
+                <!--<DataGrid x:Name="LogDataGridView" Height="91" AutoGenerateColumns="True"></DataGrid> -->
+                
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
